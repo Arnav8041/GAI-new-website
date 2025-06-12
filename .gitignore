@@ -1,0 +1,5 @@
+# VS Code settings folder
+.vscode/
+
+# Environment files (for future backend or secrets)
+.env
