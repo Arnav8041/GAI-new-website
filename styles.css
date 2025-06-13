@@ -112,7 +112,7 @@ header{
 
 .nav-link:hover{
     background: #FFD278;
-    color: #641A25;
+    color:#641A25;
     transform: translateY(-2px);
 }
 
@@ -125,8 +125,7 @@ header{
     gap: 60px;
     max-width: 1200px;
     margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
+    min-height: 100vh;
 
 }
 
@@ -218,6 +217,7 @@ header{
 .features {
     padding: 80px 0;
     background: #FFCC33 ;
+    min-height: 100vh;
 }
 
 .features h2 {
