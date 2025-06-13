@@ -15,16 +15,19 @@
     --medium-gray: #6B7280;
     --dark-gray: #374151;
     --gradient-primary: linear-gradient(135deg, var(--dark-blue), var(--purple));
-    --gradient-accent: linear-gradient(135deg, var(--maroon), var(--gold));
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --gradient-accent: radial-gradient(#F5BC31 50%,#581318 );
+    --gradient-button: linear-gradient(135deg,#4d1115 65%,#F5BC31);
+    --gradient-button-hover: linear-gradient( 135deg,#F5BC31 50%,#581318);
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.41);
+    --shadow-yellow: 0 4px 6px rgba(241, 207, 10, 0.479);
     --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 body {
     font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
+    line-height: 1.7;
     color: var(--dark-gray);
-    background-color: var(--white);
+    background-color: #581318;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -40,16 +43,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Navigation */
-.navbar {
-    background: var(--gradient-primary);
+
+header{
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: var(--shadow);
+}
+.navbar {
+    background: #501114;
+    box-shadow: var(--shadow-yellow);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .nav-container {
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
@@ -61,7 +69,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-logo {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 1px;
     color: var(--white);
 }
 
@@ -80,6 +88,11 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 1.5rem;
+    color: #F5BC31;
+}
+
+.nav-container #home-link{
+    text-decoration: none;
 }
 
 .nav-menu {
@@ -89,23 +102,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-link {
-    color: var(--white);
+    color: #F5BC31;
     text-decoration: none;
     font-weight: 500;
     padding: 8px 16px;
-    border-radius: 6px;
+    border-radius: 50px;
     transition: all 0.3s ease;
 }
 
-.nav-link:hover,
-.nav-link.active {
-    background: rgba(255, 255, 255, 0.2);
+.nav-link:hover{
+    background: #FFD278;
+    color: #641A25;
     transform: translateY(-2px);
 }
 
 /* Hero Section */
 .hero {
-    background: var(--gradient-primary);
     padding: 100px 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -115,6 +127,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto;
     padding-left: 20px;
     padding-right: 20px;
+
 }
 
 .hero-content {
@@ -131,36 +144,35 @@ h1, h2, h3, h4, h5, h6 {
     background-clip: text;
 }
 
-.hero-subtitle {
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin-bottom: 24px;
-    opacity: 0.9;
-}
 
 .hero-description {
     font-size: 1.2rem;
     margin-bottom: 40px;
     opacity: 0.8;
-    max-width: 500px;
+    max-width: 400px;
+    text-align: left;
+    color: #F5BC31;
+    font-weight: bold;
 }
 
 .cta-button {
     display: inline-block;
-    background: var(--gradient-accent);
-    color: var(--white);
+    background: var(--gradient-button);
+    color: #F5BC31;
     padding: 16px 32px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
     font-size: 1.1rem;
     transition: all 0.3s ease;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow); 
 }
 
 .cta-button:hover {
     transform: translateY(-3px) scale(1.05);
     box-shadow: var(--shadow-lg);
+    color:#581318;
+    background: var(--gradient-button-hover);
 }
 
 .hero-visual {
@@ -205,14 +217,14 @@ h1, h2, h3, h4, h5, h6 {
 /* Features Section */
 .features {
     padding: 80px 0;
-    background: var(--light-gray);
+    background: #FFCC33 ;
 }
 
 .features h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 60px;
-    color: var(--dark-gray);
+    color: #641A25;
 }
 
 .features-grid {
@@ -222,7 +234,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .feature-card {
-    background: var(--white);
+    background: #641A25;
     padding: 40px 30px;
     border-radius: 16px;
     text-align: center;
@@ -243,11 +255,11 @@ h1, h2, h3, h4, h5, h6 {
 .feature-card h3 {
     font-size: 1.5rem;
     margin-bottom: 16px;
-    color: var(--dark-blue);
+    color: #F5BC31;
 }
 
 .feature-card p {
-    color: var(--medium-gray);
+    color: #edd55c;
     line-height: 1.6;
 }
 
@@ -604,8 +616,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Footer */
 footer {
-    background: var(--dark-gray);
-    color: var(--white);
+    background: #4d1115;
+    color: #edd55c;
     padding: 40px 0;
     text-align: center;
 }
