@@ -265,7 +265,7 @@ header{
 
 /* Page Header */
 .page-header {
-    background: var(--gradient-primary);
+    background: #FFCC33;
     padding: 80px 0;
     text-align: center;
     color: var(--white);
@@ -274,11 +274,14 @@ header{
 .page-header h1 {
     font-size: 3rem;
     margin-bottom: 16px;
+    color: #7A0019;
 }
 
 .page-header p {
     font-size: 1.2rem;
     opacity: 0.9;
+    color: #7A0019;
+    font-weight: bold;
 }
 
 /* Mission Section */
@@ -295,27 +298,27 @@ header{
 .mission h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
-    color: var(--dark-blue);
+    color: #FFCC33;
 }
 
 .mission p {
     font-size: 1.1rem;
     line-height: 1.8;
     margin-bottom: 24px;
-    color: var(--medium-gray);
+    color: #FFCC33;
 }
 
 /* Officers Section */
 .officers {
     padding: 80px 0;
-    background: var(--light-gray);
+    background: var(--gradient-button-hover);
 }
 
 .officers h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 60px;
-    color: var(--dark-gray);
+    color: #7A0019;
 }
 
 .officers-grid {
@@ -325,7 +328,7 @@ header{
 }
 
 .officer-card {
-    background: var(--white);
+    background: #7A0019;
     padding: 40px;
     border-radius: 16px;
     text-align: center;
@@ -341,13 +344,13 @@ header{
 .officer-avatar {
     width: 80px;
     height: 80px;
-    background: var(--gradient-primary);
+    background: #FFCC33;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 24px;
-    color: var(--white);
+    color: #7A0019;
     font-size: 1.5rem;
     font-weight: 600;
 }
@@ -355,18 +358,19 @@ header{
 .officer-card h3 {
     font-size: 1.5rem;
     margin-bottom: 8px;
-    color: var(--dark-blue);
+    color: #FFCC33;
 }
 
 .officer-card h4 {
-    color: var(--maroon);
+    color: #FFCC33;
     margin-bottom: 20px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .officer-card p {
-    color: var(--medium-gray);
+    color: #F5BC31;
     line-height: 1.6;
+    font-weight: 500;
 }
 
 /* Events Section */
