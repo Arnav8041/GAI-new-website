@@ -18,9 +18,9 @@
     --gradient-accent: radial-gradient(#F5BC31 50%,#581318 );
     --gradient-button: linear-gradient(135deg,#4d1115 65%,#F5BC31);
     --gradient-button-hover: linear-gradient( 135deg,#F5BC31 50%,#581318);
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.41);
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.514);
     --shadow-yellow: 0 4px 6px rgba(241, 207, 10, 0.479);
-    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.347);
 }
 
 body {
@@ -52,8 +52,7 @@ header{
 .navbar {
     background: #501114;
     box-shadow: var(--shadow-yellow);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    
 }
 
 .nav-container {
@@ -105,7 +104,7 @@ header{
     color: #F5BC31;
     text-decoration: none;
     font-weight: 500;
-    padding: 8px 16px;
+    padding: 10px 20px;
     border-radius: 50px;
     transition: all 0.3s ease;
 }
@@ -125,7 +124,7 @@ header{
     gap: 60px;
     max-width: 1200px;
     margin: 0 auto;
-    min-height: 100vh;
+    min-height: 95vh;
 
 }
 
@@ -217,7 +216,7 @@ header{
 .features {
     padding: 80px 0;
     background: #FFCC33 ;
-    min-height: 100vh;
+    min-height: 90vh;
 }
 
 .features h2 {
@@ -268,7 +267,6 @@ header{
     background: #FFCC33;
     padding: 80px 0;
     text-align: center;
-    color: var(--white);
 }
 
 .page-header h1 {
@@ -322,10 +320,35 @@ header{
 }
 
 .officers-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    display: flex;
+    flex-direction: row;
     gap: 40px;
+    overflow-x: auto; /* for enabling scrolling in x-axis*/
+    scroll-behavior: smooth;
+    padding-top: 15px;
 }
+
+/* For Chrome, Edge, Safari, Opera */
+.officers-grid::-webkit-scrollbar {
+  height: 8px; /* Height for horizontal scrollbar */
+  background: transparent;
+}
+
+.officers-grid::-webkit-scrollbar-track {
+  background: #7A0019; /* Track color */
+  border-radius: 8px;
+}
+
+.officers-grid::-webkit-scrollbar-thumb {
+  background: #FFCC33; /* Thumb color */
+  border-radius: 8px;
+  border: 3px solid #7A0019; 
+}
+
+.officers-grid::-webkit-scrollbar-thumb:hover {
+  background: #e8a704; /* Thumb color on hover */
+}
+
 
 .officer-card {
     background: #7A0019;
@@ -334,6 +357,9 @@ header{
     text-align: center;
     box-shadow: var(--shadow);
     transition: all 0.3s ease;
+    flex: 0 0 350px;
+    min-width: 350px;
+    max-width: 350px;
 }
 
 .officer-card:hover {
@@ -384,7 +410,7 @@ header{
 }
 
 .event-card {
-    background: var(--white);
+    background: #FFCC33;
     border-radius: 16px;
     padding: 30px;
     margin-bottom: 30px;
@@ -401,8 +427,8 @@ header{
 }
 
 .event-date {
-    background: var(--gradient-accent);
-    color: var(--white);
+    background: var(--gradient-button);
+    color: #FFCC33;
     padding: 20px;
     border-radius: 12px;
     text-align: center;
@@ -425,13 +451,14 @@ header{
 .event-content h3 {
     font-size: 1.5rem;
     margin-bottom: 16px;
-    color: var(--dark-blue);
+    color: #7A0019;
 }
 
 .event-content p {
-    color: var(--medium-gray);
+    color: #7A0019;
     line-height: 1.6;
     margin-bottom: 20px;
+    font-weight: 500;
 }
 
 .event-meta {
@@ -441,8 +468,9 @@ header{
 }
 
 .event-meta span {
-    color: var(--medium-gray);
+    color: #7A0019;
     font-size: 0.9rem;
+    font-weight: 450;
 }
 
 /* Resources Section */
